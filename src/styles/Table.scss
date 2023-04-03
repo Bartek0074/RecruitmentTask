@@ -20,7 +20,6 @@
 			background-color: variables.$table-header-color;
 			font-weight: bold;
 			box-shadow: 0 5px 12px 5px variables.$box-shadow-color;
-			
 		}
 		tbody {
 			tr {
@@ -37,9 +36,20 @@
 			height: 48px;
 			white-space: nowrap;
 			vertical-align: middle;
-			padding: 0 0.5em;
+			padding: 0 0.75em;
 			font-size: 1.5rem;
+			transition: padding .3s;
 		}
-		
+	}
+}
+
+@media (min-width: 576px) {
+	.table-wrapper {
+		table {
+			th,
+			td {
+				padding: 0 1em;
+			}
+		}
 	}
 }
