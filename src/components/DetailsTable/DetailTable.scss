@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss';
+
+.detail-table{
+	height: calc(30% - 0.5em);
+	&__input {
+		padding: 0.375em 0.5em;
+		border: 1px solid transparent;
+		background: none;
+		border-radius: 5px;
+		color: variables.$font-color-black;
+		cursor: pointer;
+		transition: border-color .3s;
+		width: 150px;
+		&:hover{
+			border-color: variables.$gray
+		}
+		&:focus{
+			outline: none;
+			border-color: variables.$light-blue;
+		}
+	}
+}

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import getData from './utils/getData';
+
+import MainTable from './components/MainTable/MainTable';
+import DetailsTable from './components/DetailsTable/DetailsTable'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [index, setIndex] = useState(0);
+
+	useEffect(() => {
+		getData();
+	}, []);
+
+	return (
+		<div className='app'>
+			<MainTable setIndex={setIndex} />
+			<DetailsTable currentIndex={index}/>
+		</div>
+	);
 }
 
 export default App;

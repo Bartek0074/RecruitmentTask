@@ -1,0 +1,54 @@
+@use '../../styles/variables.scss';
+
+.main-table {
+	height: calc(70% - 0.5em);
+	margin-bottom: 1em;
+	tbody {
+		tr {
+			cursor: pointer;
+			.main-table__id {
+				text-align: center;
+			}
+			.main-table__about-wrapper {
+				position: relative;
+				max-width: 225px;
+				.main-table__about-more {
+					position: absolute;
+					z-index: 1;
+					padding: 1em 0.5em;
+					right: 0px;
+					top: 50%;
+					transform: translateY(-50%);
+					p {
+						font-size: 1.3rem;
+						font-weight: bold;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+				.main-table__about {
+					position: relative;
+					overflow-x: hidden;
+					white-space: nowrap;
+					&::after {
+						position: absolute;
+						content: '';
+						right: 0;
+						top: 0;
+						height: 100%;
+						width: 80px;
+						background: variables.$table-gradient;
+					}
+				}
+			}
+			&:hover {
+				.main-table__about {
+					&::after {
+						background: variables.$table-gradient-hover;
+					}
+				}
+			}
+		}
+	}
+}
