@@ -4,16 +4,17 @@
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: scroll;
-	max-width: fit-content;
+	width: 100%;
 	border-radius: 5px;
 	background-color: variables.$table-row-color;
 	table {
+		width: 100%;
 		border-collapse: collapse;
 		border-style: hidden;
 		overflow: hidden;
 		position: relative;
 		thead {
-			text-align: left;
+			text-align: center;
 			z-index: 100;
 			position: sticky;
 			top: 0;
@@ -35,6 +36,7 @@
 		td {
 			height: 48px;
 			white-space: nowrap;
+			text-align: center;
 			vertical-align: middle;
 			padding: 0 0.75em;
 			font-size: 1.5rem;
